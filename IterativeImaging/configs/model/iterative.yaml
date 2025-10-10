@@ -1,0 +1,31 @@
+_target_: src.models.iterative_imaging.IterativeImaging
+
+pretrained_model:
+  _target_: diffusers.DDPMPipeline.from_pretrained
+  pretrained_model_name_or_path: hf_pipelines/ddpm-cifar10-32
+
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 5.0e-5
+
+# scheduler:
+#   _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+#   _partial_: true
+#   mode: min
+#   factor: 0.1
+#   patience: 10
+
+# net:
+#   _target_: src.models.components.simple_dense_net.SimpleDenseNet
+#   input_size: 784
+#   lin1_size: 64
+#   lin2_size: 128
+#   lin3_size: 64
+#   output_size: 10
+train_type: finetune-filtered
+buffer_size: 160
+
+# compile model for faster training with pytorch 2.0
+compile: false

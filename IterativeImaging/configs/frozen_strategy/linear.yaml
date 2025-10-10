@@ -1,0 +1,9 @@
+defaults:
+  - override /model: iterative
+
+model:
+  frozen_strategy:
+    _target_: src.frozen_strategy.FrozenStrategy
+    name: linear
+    N0: 1
+    inc: 10

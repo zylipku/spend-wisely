@@ -1,0 +1,20 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - default
+  - _self_
+
+
+model:
+
+  frozen_strategy:
+    name: linear
+    N0: 1
+    inc: 30.0
+
+hydra:
+  run:
+    dir: ${paths.log_dir}/runs/${tags}/N0=${model.frozen_strategy.N0}_inc=${model.frozen_strategy.inc}/${now:%Y%m%d}-${now:%H%M%S}

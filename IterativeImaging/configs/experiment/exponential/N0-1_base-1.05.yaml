@@ -1,0 +1,20 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - default
+  - _self_
+
+
+model:
+
+  frozen_strategy:
+    name: exponential
+    N0: 1
+    base: 1.05
+
+hydra:
+  run:
+    dir: ${paths.log_dir}/runs/${tags}/N0=${model.frozen_strategy.N0}_base=${model.frozen_strategy.base}/${now:%Y%m%d}-${now:%H%M%S}

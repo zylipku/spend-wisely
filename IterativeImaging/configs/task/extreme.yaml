@@ -1,0 +1,16 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /model: iterative
+  - _self_
+
+
+model:
+  experiment_setting:
+    noise_ratio: 0.05
+    psnr_range:
+      - 31
+      - 34
