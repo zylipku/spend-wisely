@@ -5,18 +5,20 @@ This repository contains the code for the Iterative Learning on math reasoning t
 ## Requirements
 
 OpenRLHF
+
 OpenCampass
+
 GSM-symbolic
 
 ## Running the code
 
 ### Training
 
-'''bash
+```bash
 sh train.sh
-'''
+```
 
 ### Evaluation
-'''bash
+```bash
 sh evaluate.sh
-'''
+```
