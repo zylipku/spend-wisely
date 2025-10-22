@@ -2,9 +2,9 @@
 
 This is the official repository for the paper:
 
-**Spend Wisely: Maximizing Post-Training Gains in Iterative Synthetic Data Boostrapping**
+**Spend Wisely: Maximizing Post-Training Gains in Iterative Synthetic Data Bootstrapping**
 
-*NeuriPS 2025 Spotlight*
+*NeurIPS 2025 Spotlight*
 
 [arXiv link](https://arxiv.org/abs/2501.18962)
 
